@@ -1,8 +1,12 @@
 /* Variables CSS pour faciliter les modifications */
 :root {
     --primary-color: #ff6b6b; /* Rouge au lieu de bleu */
-    --background-color: #fff3e0; /* Beige au lieu de gris */    
-    --secondary-color: #6c757d;
+    --background-color: #fff3e0; /* Beige au lieu de gris */
+}
+
+h1 {
+    font-size: 3rem; /* Plus grand */
+    color: var(--primary-color);
 }
 
 * {
@@ -24,10 +28,4 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Styles à personnaliser par chaque étudiant */
-h1 {
-    font-size: 3rem; /* Plus grand */
-    color: var(--primary-color);
 }
