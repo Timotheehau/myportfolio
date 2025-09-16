@@ -1,8 +1,8 @@
 /* Variables CSS pour faciliter les modifications */
 :root {
-    --primary-color: #007bff;
+    --primary-color: #ff6b6b; /* Rouge au lieu de bleu */
+    --background-color: #fff3e0; /* Beige au lieu de gris */    
     --secondary-color: #6c757d;
-    --background-color: #f8f9fa;
 }
 
 * {
@@ -27,3 +27,7 @@ header {
 }
 
 /* Styles à personnaliser par chaque étudiant */
+h1 {
+    font-size: 3rem; /* Plus grand */
+    color: var(--primary-color);
+}
