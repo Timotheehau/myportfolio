@@ -4,11 +4,27 @@ export default function ContactSection() {
   return (
     <section id="contact">
       <div className="contact-container">
-        <h2>📬 Me Contacter</h2>
+        <h2 id="contact-h2">📬 Me Contacter</h2>
         <p>
           N’hésite pas à me contacter via mes réseaux ou par mail.  
           Je suis toujours ouvert à de nouvelles opportunités et collaborations.
         </p>
+
+        <p>
+          Je suis spécialisé en développement front-end et back-end, avec une passion pour les interfaces modernes et l'expérience utilisateur.  
+          Disponible pour des projets freelance, des collaborations ou des stages.
+        </p>
+
+        <p style={{ fontStyle: "italic", marginTop: "1rem" }}>
+          "La technologie est au service des idées, pas l’inverse."
+        </p>
+
+        <ul style={{ textAlign: "left", maxWidth: "500px", margin: "2rem auto", listStyleType: "square" }}>
+          <li>Développement Web (React, Node.js)</li>
+          <li>UI / UX Design</li>
+          <li>Création de sites vitrines et applications web</li>
+          <li>Optimisation performance et SEO</li>
+        </ul>
 
         <div className="contact-buttons">
           <a
