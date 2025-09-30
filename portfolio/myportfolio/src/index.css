@@ -29,7 +29,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
 }
 
 /* Contenu centré au-dessus de l'overlay */
@@ -78,47 +78,117 @@ html {
     font-size: 1rem;
   }
 }
+/* SECTION PROJECTS */
 #Projects {
-  padding: 4rem 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #Projects h2 {
-  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  letter-spacing: 1px;
+  position: relative;
 }
 
+#Projects h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #4da6ff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* GRID DES CARTES */
+#Projects .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* STYLE DES CARTES */
 #Projects .card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+#Projects .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* TITRE DE LA CARTE */
 #Projects .card h3 {
-  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  color: #4da6ff;
+  transition: color 0.3s ease;
 }
 
+#Projects .card:hover h3 {
+  color: #00e0ff;
+}
+
+/* TEXTE DE LA CARTE */
 #Projects .card p {
-  color: #ccc;
-  margin-bottom: 1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
+/* LIENS DE LA CARTE */
 #Projects .card a {
+  display: inline-block;
   color: #4da6ff;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.3s;
 }
 
 #Projects .card a:hover {
+  color: #00e0ff;
+  transform: translateY(-2px);
   text-decoration: underline;
 }
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  #Projects {
+    padding: 4rem 1rem;
+  }
+
+  #Projects h2 {
+    font-size: 2rem;
+  }
+}
+
 /* Section About */
 #about {
   padding: 4rem 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
   color: #f5f5f5;
 }
 
@@ -142,7 +212,7 @@ html {
 }
 /* Contact Section */
 #contact {
-  background-color: rgba(0,0,0,0.5); /* fond clair */
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
   color: white; /* texte clair */
   min-height: 100vh; /* au moins une hauteur de page */
   display: flex;
@@ -265,4 +335,63 @@ html {
 .scroll-to-top:hover {
   background-color: #005ccc;
   transform: translateY(-3px);
+}
+/* SkillSection.css */
+.skills-section {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #4f46e5, #a855f7);
+  color: white;
+  border-radius: 16px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-gradient h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-gradient .icon {
+  font-size: 1.5rem;
+}
+
+.card-gradient ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-gradient li::before {
+  content: "• ";
+  color: #fff;
 }

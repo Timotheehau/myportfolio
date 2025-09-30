@@ -5,6 +5,7 @@ import AboutSection from './sections/About';
 import ProjectSection from './sections/Projects';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
+import SkillSection from './sections/Skills';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <HeroSection />
         <AboutSection />
         <ProjectSection />
+        <SkillSection />
         <ContactSection />
       </main>
       <ScrollToTop />
