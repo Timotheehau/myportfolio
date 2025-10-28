@@ -18,6 +18,14 @@ export default function ProjectSection() {
             </p>
             <a href="/GoalTeach/accueil.html">Visiter le site</a>
           </div>
+          <div className="card">
+            <h3>Veille technologique : La 5G verte</h3>
+            <p>
+              Étude approfondie sur l'impact environnemental de la 5G...
+            </p>
+            <a href="/assets/5G/Veille_5G_Verte.pptx" target="_blank" rel="noopener noreferrer">Télécharger le powerpoint</a>
+            <a href="/assets/5G/Résumé_5G_Verte.docx" target="_blank" rel="noopener noreferrer">Télécharger le résumé word</a>
+          </div>
         </div>
       </div>
     </section>

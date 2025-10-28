@@ -4,17 +4,17 @@ export default function SkillSection() {
     {
       category: "Front-end",
       icon: "💻",
-      items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
+      items: ["React", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
     },
     {
       category: "Back-end",
       icon: "🛠️",
-      items: ["Node.js", "Express", "MongoDB", "SQL", "REST API"],
+      items: ["Node.js", "Symfony", "Apache", "SQL", "Docker"],
     },
     {
       category: "Outils & Méthodologies",
       icon: "⚙️",
-      items: ["Git/GitHub", "Scrum/Agile", "VS Code", "Figma", "Postman"],
+      items: ["Git/GitHub", "JetBrain Toolbox", "DataGrip", "PhpStorm", "VS Code", "Figma", "Postman"],
     },
   ];
 
