@@ -16,7 +16,7 @@ export default function ProjectSection() {
             <p>
               GoalTeach est une plateforme éducative en ligne...
             </p>
-            <a href="/GoalTeach/accueil.html">Visiter le site</a>
+            <a href="accueil.html">Visiter le site</a>
           </div>
           <div className="card">
             <h3>Veille technologique : La 5G verte</h3>
