@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2E18B61F;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+section{
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+.logoheader {
+    width:169px;
+    height: 176px;
+    margin-left: 20px;
+    background-image: url("./assets/logo-no-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    }
+header {
+    background-color: #0629E026;
+    width: 100vw;
+    height: auto;
+    color: #fff;
+    position:absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+header a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:3em;
+    color: black;
+    margin-right: 1vw;
+}
+
+footer {
+    background-color: rgba(6, 41, 224, 0.15);
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: #000000;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.img1{
+background-image: url("./assets/3759793-1.webp");
+height: 57vh;
+width: 60vw;
+margin-top: 15vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: right;
+border-radius: 60px;
+
+}
+.s1{
+margin-left: 10vw;
+margin-top: 23vh;
+display: flex;
+flex-direction: row;
+height: 50vh;
+width: 80vw;
+align-items: center;
+
+}
+.matières{
+    margin-left: 10vw;
+    background-color: rgba(124, 12, 192, 0.40);
+    font-size: 20px;
+    font-weight: bold;
+    height: 57vh;
+    margin-top: 15vh;
+    border-radius: 60px;
+    padding-left: 1em;
+    
+}
+.premierh3{
+    margin-top: 6vh;
+}
+.matiere1{
+    margin-top: 6vh;
+}
+.s2{
+    border: 2px ;
+    padding: 1vh;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 30vw;
+    font-size: 25px;
+    color: #000; 
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    box-shadow: grey 0px 0px 10px 0px;
+}
+.s2 h3 {
+    margin-left: 4vw;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: bold;
+}
+.img2 {
+    background-image: url("./assets/photores.webp");
+    
+    background-repeat: no-repeat;
+    width: 50vw;
+    background-size: cover;
+    border-radius: 30px;
+    }
+.s3{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    width: 80vw;
+    height: auto;
+    background: rgba(124, 12, 192, 0.40);
+    padding: 1em 1em;
+
+}
+.s3p2{
+    box-sizing: border-box;
+    padding-left: 1vw;
+}
+.s4{
+    box-sizing: border-box;
+    box-shadow: grey 0px 0px 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    width: 40vw;
+    padding: 1em 0;
+    border-radius: 30px;
+}
+.t1{
+    width: 100vw;
+}
+.s5{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+    border-radius: 30px;
+    background-color:rgba(124, 12, 192, 0.40) ;
+}
+.s6 {
+    box-sizing: border-box;
+    box-shadow: grey 0px 0px 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    width: 40vw;
+    padding: 1em 0;
+    border-radius: 30px;
+}
+.s7{
+
+    margin-top: 10vh;
+    
+}
+.s7 div{
+    box-sizing: border-box;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(124, 12, 192, 0.40);
+    border-radius: 30px;
+
+}
+.bbl3 {
+ 
+    margin-left: 5vw;
+}
+.s8{
+    box-sizing: border-box;
+    box-shadow: grey 0px 0px 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    width: 40vw;
+    padding: 1em 0;
+    border-radius: 30px;
+}
+.s9{
+
+    margin-top: 10vh;
+    
+}
+.s9 div{
+
+    box-sizing: border-box;
+    padding: 1em 0;
+    margin-left: 5vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(124, 12, 192, 0.40);
+    margin-bottom: 1.5vh;
+    border-radius: 60px;
+}
+.bubbles{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}

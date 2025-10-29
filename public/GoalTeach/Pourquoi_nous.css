@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin-top: 10vh;
+    flex-direction: row;
+    margin-bottom: 20vh;
+}
+.logoheader {
+    width:169px;
+    height: 176px;
+    margin-left: 20px;
+    background-image: url("./assets/logo-no-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    }
+header {
+    background-color: #0629E026;
+    width: 100vw;
+    height: auto;
+    color: #fff;
+    position:absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+header a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:3em;
+    color: black;
+    margin-right: 1vw;
+}
+
+footer {
+    background-color: rgba(6, 41, 224, 0.15);
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: #000000;
+}
+
+    .s2{
+        /* box-sizing: border-box; */
+        box-shadow: grey 0px 0px 10px 0px;
+        /* display: flex;
+        flex-direction: column;
+        margin-top: 10vh; */
+        width:60vw;
+        padding: 1em 2rem;
+        /* height: 40vh; */
+    }
+    
+
+    .s1{
+        background-image: url("./assets/64627-1.webp");
+        background-repeat: no-repeat;
+        background-position: left 5% bottom 50%;
+        width: 60vw;
+        height: 40vh;
+        margin-top: 10vh;
+    }

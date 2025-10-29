@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    background-image: url("./assets/logo-no-background.png");
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: left 5% bottom 20%;
+}
+.logoheader {
+    width:169px;
+    height: 176px;
+    margin-left: 20px;
+    background-image: url("./assets/logo-no-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    }
+header {
+    background-color: #0629E026;
+    width: 100vw;
+    height: auto;
+    color: #fff;
+    position:absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+header a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:3em;
+    color: black;
+    margin-right: 1vw;
+}
+
+footer {
+    background-color: rgba(6, 41, 224, 0.15);
+    text-align: center;
+    padding: 1em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    color: #000000;
+}
+.registration-container {
+    width: 20vw;
+    padding: 2vh;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 20vh;
+    margin-left: 50vw;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #267bb5;
+}
