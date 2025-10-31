@@ -26,6 +26,14 @@ export default function ProjectSection() {
             <a href="/assets/5G/Veille_5G_Verte.pptx" target="_blank" rel="noopener noreferrer">Télécharger le powerpoint</a>
             <a href="/assets/5G/resume.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le résumé PDF</a>
           </div>
+            <div className="card">
+            <h3>Veille technologique : Les risques liés à l'IA</h3>
+            <p>
+              Étude des risques liés à l'IA ...
+            </p>
+            <a href="/assets/IA/powerpoint_Veille_IA.pptx" target="_blank" rel="noopener noreferrer">Télécharger le powerpoint</a>
+            <a href="/assets/IA/resume_ia.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le résumé PDF</a>
+          </div>
         </div>
       </div>
     </section>
