@@ -26,7 +26,7 @@ export default function ProjectSection() {
               Une application développée avec Symfony, gérant la gestion des montures et leurs statistiques.
             </p>
             <a href="http://localhost:8000" target="_blank" rel="noopener noreferrer">
-              Visiter le site
+              Visiter le site (nécessite un serveur local symfony)
             </a>
           </div>
 
