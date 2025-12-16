@@ -19,6 +19,13 @@ export default function ProjectSection() {
             <a href="/GoalTeach/accueil.html">Visiter le site</a>
           </div>
           <div className="card">
+            <h3>Mon Projet Symfony</h3>
+            <p>Une application développée avec Symfony, gérant [fonctionnalité principale]...</p>
+            <a href="http://localhost:8000" target="_blank" rel="noopener noreferrer">
+              Visiter le site
+            </a>
+          </div>
+          <div className="card">
             <h3>Veille technologique : La 5G verte</h3>
             <p>
               Étude approfondie sur l'impact environnemental de la 5G...
