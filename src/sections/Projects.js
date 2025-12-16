@@ -11,6 +11,7 @@ export default function ProjectSection() {
             </p>
             <a href="https://www.jhprint3d.com">Visiter le site</a>
           </div>
+
           <div className="card">
             <h3>GoalTeach</h3>
             <p>
@@ -18,13 +19,17 @@ export default function ProjectSection() {
             </p>
             <a href="/GoalTeach/accueil.html">Visiter le site</a>
           </div>
+
           <div className="card">
-            <h3>Mon Projet Symfony</h3>
-            <p>Une application développée avec Symfony, gérant [fonctionnalité principale]...</p>
+            <h3>Dragodingo</h3>
+            <p>
+              Une application développée avec Symfony, gérant la gestion des montures et leurs statistiques.
+            </p>
             <a href="http://localhost:8000" target="_blank" rel="noopener noreferrer">
               Visiter le site
             </a>
           </div>
+
           <div className="card">
             <h3>Veille technologique : La 5G verte</h3>
             <p>
@@ -33,7 +38,8 @@ export default function ProjectSection() {
             <a href="/assets/5G/Veille_5G_Verte.pptx" target="_blank" rel="noopener noreferrer">Télécharger le powerpoint</a>
             <a href="/assets/5G/resume.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le résumé PDF</a>
           </div>
-            <div className="card">
+
+          <div className="card">
             <h3>Veille technologique : Les risques liés à l'IA</h3>
             <p>
               Étude des risques liés à l'IA ...
@@ -41,6 +47,7 @@ export default function ProjectSection() {
             <a href="/assets/IA/powerpoint_Veille_IA.pptx" target="_blank" rel="noopener noreferrer">Télécharger le powerpoint</a>
             <a href="/assets/IA/resume_ia.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le résumé PDF</a>
           </div>
+
         </div>
       </div>
     </section>
