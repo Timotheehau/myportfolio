@@ -1,397 +1,228 @@
-
-section {
-  scroll-margin-top: 80px; /* hauteur de ta navbar */
+:root {
+  --primary: rgba(187, 11, 11);
+  --accent: #ffcc00;
+  /* On fonce l'overlay pour la lisibilité du blanc */
+  --glass-bg: rgba(15, 23, 42, 0.85); 
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  /* Empêche l'effet de rebond blanc au scroll */
+  overscroll-behavior: none; 
+  /* On s'assure que le fond du HTML est aussi sombre que ton thème */
+  background-color: #0f172a; 
+}
+
+body {
+  overflow-x: hidden; /* Évite un scroll horizontal parasite */
+  width: 100%;
+}
+
 main {
-  padding-bottom: 100px; /* ou un peu plus que la hauteur de la navbar */
+  /* On s'assure que l'image couvre tout, même en cas de léger décalage */
+  min-height: 100vh;
+  background-attachment: fixed;
 }
 
-/* Section hero pleine page */
-.hero {
-  position: relative;
-  height: 100vh;
-  /*background-image: url('/path/to/your-image.jpg');*/
+/* Fond global fixe */
+main {
+  min-height: 100vh;
+  background-image: url('../public/assets/op.webp'); 
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-html {
-  scroll-behavior: smooth;
-}
-/* Overlay sombre pour lisibilité */
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
+  background-attachment: fixed;
 }
 
-/* Contenu centré au-dessus de l'overlay */
-.hero .content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  padding: 0 20px;
-}
-
-/* Titre */
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-/* Description */
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-/* Bouton CTA */
-.hero .cta-button {
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  color: white;
-  background-color: #0077ff;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.hero .cta-button:hover {
-  background-color: #005ccc;
-}
-
-/* Responsive pour petits écrans */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-}
-/* SECTION PROJECTS */
-#Projects {
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
+/* Uniformisation des sections */
+section {
+  scroll-margin-top: 80px;
+  padding: 80px 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
-#Projects h2 {
+/* Conteneur commun pour le texte lisible */
+.content-wrapper {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  width: 100%;
+  max-width: 1100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Amélioration de la visibilité du texte blanc */
+h1, h2, h3, p, li, span {
+  color: #ffffff;
+  text-shadow: var(--text-shadow);
+}
+
+h2 {
   font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
-  letter-spacing: 1px;
-  position: relative;
 }
 
-#Projects h2::after {
+h2::after {
   content: "";
   display: block;
-  width: 80px;
-  height: 3px;
-  background: #4da6ff;
+  width: 70px;
+  height: 4px;
+  background: var(--accent);
   margin: 10px auto 0;
-  border-radius: 2px;
 }
 
-/* GRID DES CARTES */
-#Projects .cards-grid {
+/* Grille de cartes (Projects, Documentation, Skills) */
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
 }
 
-/* STYLE DES CARTES */
-#Projects .card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+/* Style unique pour TOUTES les cartes */
+.card, .card-gradient {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  padding: 25px;
+  border-radius: 15px;
+  transition: transform 0.3s, background 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#Projects .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
-  background: rgba(255, 255, 255, 0.15);
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
 }
 
-/* TITRE DE LA CARTE */
-#Projects .card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #4da6ff;
-  transition: color 0.3s ease;
-}
-
-#Projects .card:hover h3 {
-  color: #00e0ff;
-}
-
-/* TEXTE DE LA CARTE */
-#Projects .card p {
-  color: #e0e0e0;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
-
-/* LIENS DE LA CARTE */
-#Projects .card a {
-  display: inline-block;
-  color: #4da6ff;
+/* Liens */
+a {
+  color: var(--primary);
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s, transform 0.3s;
 }
 
-#Projects .card a:hover {
-  color: #00e0ff;
-  transform: translateY(-2px);
+a:hover {
+  color: var(--accent);
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-  #Projects {
-    padding: 4rem 1rem;
-  }
-
-  #Projects h2 {
-    font-size: 2rem;
-  }
-}
-
-/* Section About */
-#about {
-  padding: 4rem 1rem;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
-  color: #f5f5f5;
-}
-
-.about-container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#about h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: white;
-}
-
-#about p {
-  color: white;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-/* Contact Section */
-#contact {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
-  color: white; /* texte clair */
-  min-height: 100vh; /* au moins une hauteur de page */
-  display: flex;
-  flex-direction: column;
+#hero {
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-
-.contact-container {
-  max-width: 900px;
-  width: 100%;
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
-
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-#contact p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-  color: white;
-}
-
-#contact ul {
-  padding-left: 1.5rem;
-  list-style-type: square;
-  font-size: 1.1rem;
-  color: white;
-}
-
-#contact ul li {
-  margin-bottom: 0.8rem;
-}
-
-/* Boutons réseaux */
+/* Boutons réseaux avec effet Outline */
 .contact-buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .contact-buttons .btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 1.5rem;
-  font-weight: bold;
-  color: white;
+  gap: 0.8rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
   transition: all 0.3s ease;
-}
-
-.contact-buttons .btn:hover {
-  transform: translateY(-2px);
-}
-
-.contact-buttons .btn.linkedin {
-  background-color: #0077b5;
-}
-
-.contact-buttons .btn.linkedin:hover {
-  background-color: #005983;
-}
-
-.contact-buttons .btn.github {
-  background-color: #24292f;
-}
-
-.contact-buttons .btn.github:hover {
-  background-color: #000;
-}
-
-.contact-buttons .btn.email {
-  background-color: #d93025;
-}
-
-.contact-buttons .btn.email:hover {
-  background-color: #a5271b;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  #contact h2 {
-    font-size: 2rem;
-  }
-
-  #contact p, #contact ul li {
-    font-size: 1rem;
-  }
-
-  .contact-buttons {
-    flex-direction: column;
-  }
-}
-
-.scroll-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #0077ff;
+  
+  /* Style commun : Bordure fine et fond translucide */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
   color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  transition: background-color 0.3s, transform 0.3s;
-  z-index: 1000;
+  text-shadow: var(--text-shadow);
 }
 
-.scroll-to-top:hover {
-  background-color: #005ccc;
-  transform: translateY(-3px);
-}
-/* SkillSection.css */
-.skills-section {
-  padding: 4rem 1rem;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(31, 41, 55, 0.95));
-  text-align: center;
+/* Couleurs spécifiques au survol pour garder l'identité des réseaux */
+.contact-buttons .btn-linkedin:hover {
+  border-color: #0077b5;
+  background: rgba(0, 119, 181, 0.15);
+  box-shadow: 0 0 15px rgba(0, 119, 181, 0.3);
 }
 
-.skills-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: white;
+.contact-buttons .btn-github:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.contact-buttons .btn-email:hover {
+  border-color: var(--accent); /* Rappel du jaune Luffy */
+  background: rgba(255, 204, 0, 0.1);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+  color: var(--accent);
 }
 
-.cards-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card-gradient {
-  background: linear-gradient(135deg, #4f46e5, #a855f7);
-  color: white;
-  border-radius: 16px;
-  padding: 25px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card-gradient:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-.card-gradient h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+.docs-list {
+  margin-top: 1.5rem;
   display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espace entre chaque ligne de document */
+}
+
+.doc-item {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.05); /* Petit fond pour séparer les lignes */
+  border-radius: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
 }
-
-.card-gradient .icon {
-  font-size: 1.5rem;
+.doc-links {
+  display: flex;
+  gap: 12px; /* DÉCOLLE ENFIN LES BOUTONS */
 }
-
-.card-gradient ul {
-  list-style: none;
-  padding-left: 0;
+.see-more-btn {
+  background: rgba(77, 166, 255, 0.1); /* Fond bleu très léger */
+  border: 1px dashed var(--primary); /* Bordure en pointillés pour le style */
+  color: var(--primary);
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  width: 100%;
 }
-
-.card-gradient li::before {
-  content: "• ";
-  color: #fff;
+.see-more-btn:hover {
+  background: var(--accent);
+  color: #000;
+  border-style: solid;
 }

@@ -3,24 +3,20 @@ export default function SkillSection() {
   const skills = [
     {
       category: "Front-end",
-      icon: "💻",
       items: ["React", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
     },
     {
       category: "Back-end",
-      icon: "🛠️",
       items: ["Node.js", "Symfony", "Apache", "SQL", "Docker"],
     },
     {
       category: "Outils & Méthodologies",
-      icon: "⚙️",
       items: ["Git/GitHub", "JetBrain Toolbox", "DataGrip", "PhpStorm", "VS Code", "Figma", "Postman"],
     },
   ];
-
   return (
-    <section id="Skills" className="skills-section">
-      <div className="container">
+    <section id="Skills">
+      <div className="content-wrapper">
         <h2>Compétences</h2>
         <div className="cards-grid">
           {skills.map((skill) => (

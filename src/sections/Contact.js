@@ -3,8 +3,8 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export default function ContactSection() {
   return (
     <section id="contact">
-      <div className="contact-container">
-        <h2 id="contact-h2">📬 Me Contacter</h2>
+      <div className="content-wrapper">
+        <h2 id="contact-h2">Me Contacter</h2>
         <p>
           N’hésite pas à me contacter via mes réseaux ou par mail.  
           Je suis toujours ouvert à de nouvelles opportunités et collaborations.
@@ -31,7 +31,7 @@ export default function ContactSection() {
             href="https://www.linkedin.com/in/timothée-hauser16/"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn linkedin"
+            className="btn-linkedin"
           >
             <Linkedin size={22} />
             <span>LinkedIn</span>
@@ -41,7 +41,7 @@ export default function ContactSection() {
             href="https://github.com/timotheehau"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn github"
+            className="btn-github"
           >
             <Github size={22} />
             <span>GitHub</span>
@@ -49,7 +49,7 @@ export default function ContactSection() {
 
           <a
             href="mailto:16.hauser@gmail.com"
-            className="btn email"
+            className="btn-email"
           >
             <Mail size={22} />
             <span>Email</span>

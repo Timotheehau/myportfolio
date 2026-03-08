@@ -1,8 +1,8 @@
 export default function ProjectSection() {
   return (
     <section id="Projects">
-      <div className="max-w-5xl mx-auto">
-        <h2>🚀 Projets</h2>
+      <div className="content-wrapper">
+        <h2>Projets</h2>
         <div className="grid">
           <div className="card">
             <h3>JHPrint3D</h3>
