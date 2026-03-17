@@ -31,6 +31,12 @@ export default function ProjectSection() {
           </div>
 
           <div className="card">
+            <h3>.Match</h3>
+            <p>Le projet de fin d'année de BTS SIO SLAM, les sportifs peuvent réserver une séance de coaching avec les coachs de la maison des ligues</p>
+            <a href="https://pointmatchfront.vercel.app">Visiter le site</a>
+          </div>
+
+          <div className="card">
             <h3>Veille technologique : La 5G verte</h3>
             <p>
               Étude approfondie sur l'impact environnemental de la 5G...
