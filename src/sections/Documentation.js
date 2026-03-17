@@ -34,7 +34,7 @@ export default function DocumentationSection() {
                                 <div className="doc-item">
                                     <span className="doc-title">Tableau de compétences</span>
                                     <div className="doc-links">
-                                        <a href="/assets/TabE5pdf.pdf" target="_blank" rel="noopener noreferrer">
+                                        <a href="/assets/TabE5pdF.pdf" target="_blank" rel="noopener noreferrer">
                                             VISUALISER
                                         </a>
                                         <a href="/assets/TabE5pdf.pdf" download>
