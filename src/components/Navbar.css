@@ -1,91 +1,135 @@
+:root {
+  --primary: rgba(187, 11, 11);
+  --accent: #ffcc00;
+  /* On fonce l'overlay pour la lisibilité du blanc */
+  --glass-bg: rgba(15, 23, 42, 0.85); 
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  /* Effet de verre sombre pour la lisibilité sur le ciel clair */
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 15px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 1000;
-  transition: background 0.3s;
+  height: 80px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000; /* Très important pour passer devant tout */
+  display: flex;
+  align-items: center;
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
 }
 
-.navbar-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-shadow: var(--text-shadow);
-}
-
-.navbar-links {
+/* Menu desktop */
+.nav-menu {
   display: flex;
-  gap: 15px;
+  list-style: none;
 }
 
-.navbar-link {
+/* État normal du lien */
+.nav-item {
+  margin-left: 2rem;
   cursor: pointer;
-  padding: 8px 12px;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border-radius: 8px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  padding: 5px 0; /* Un peu d'espace pour la barre */
 }
 
-.navbar-link:hover {
-  color: var(--primary); /* Le bleu océan */
-  background: rgba(255, 255, 255, 0.05);
+/* 2. La barre commune (Hover ET Actif) */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out, background-color 0.3s;
+  /* Par défaut, la barre est invisible (largeur 0) */
+  width: 0%;
+  background-color: var(--primary); 
 }
 
-.navbar-link.active {
-  color: var(--accent) !important; /* Le jaune Luffy pour la section active */
-  background: rgba(255, 204, 0, 0.1);
-  /* On remplace la bordure par une petite lueur jaune */
-  box-shadow: inset 0 -2px 0 var(--accent);
+/* 3. Comportement au Hover */
+.nav-item:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
 }
 
-/* Burger menu colorisé */
-.burger span {
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* 4. État Actif (Override) */
+/* Si l'élément est actif, la barre est pleine et jaune par défaut */
+.active-link {
+  color: var(--accent); /* Jaune */
+}
+
+.active-link::after {
+  width: 100%; /* La barre reste affichée */
+  background-color: var(--accent); /* Elle devient jaune */
+}
+
+/* Optionnel : Si on survole l'élément déjà actif, on peut changer sa couleur en rouge */
+.active-link:hover::after {
+  background-color: var(--primary);
+}
+
+/* Burger Menu (Caché sur desktop) */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
   width: 25px;
   height: 3px;
   background-color: white;
-  border-radius: 2px;
+  margin: 3px 0;
+  transition: 0.4s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsivité Mobile */
+@media screen and (max-width: 768px) {
   .burger {
     display: flex;
-    right: 20px;
+    z-index: 1001; /* Doit être au-dessus du menu */
   }
 
-  .navbar-links {
-    position: absolute;
-    top: 100%;
-    right: 20px;
-    /* Menu mobile en mode verre aussi */
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(15px);
+  /* Transformation du burger en "X" quand ouvert */
+  .burger.active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .burger.active .bar:nth-child(2) { opacity: 0; }
+  .burger.active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%; /* Caché par défaut */
+    top: 0;
     flex-direction: column;
-    width: 220px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px 0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: var(--glass-bg);
+    width: 70%; /* Ou 100% selon ton envie */
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
   }
 
-  .navbar-link {
-    padding: 15px 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  .nav-menu.open {
+    right: 0; /* Apparaît */
+  }
+
+  .nav-item {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
   }
 }

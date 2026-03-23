@@ -14,30 +14,20 @@ export default function Navbar() {
   const [active, setActive] = useState("hero");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Gestion du scroll (ton code actuel est correct)
   useEffect(() => {
     const handleScroll = () => {
+      const scrollPosition = window.scrollY + 120;
       let current = "hero";
-      
-      // On récupère la position actuelle du scroll + une marge
-      const scrollPosition = window.scrollY + 100; // 80px (navbar) + 20px de marge
 
       links.forEach((link) => {
         const section = document.getElementById(link.id);
         if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-
-          // On vérifie si le scroll est à l'intérieur de la section
-          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          if (scrollPosition >= section.offsetTop) {
             current = link.id;
           }
         }
       });
-      // Cas particulier : si on est tout en bas de la page (souvent utile pour le lien "Contact")
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
-        current = links[links.length - 1].id;
-      }
-
       setActive(current);
     };
 
@@ -47,37 +37,39 @@ export default function Navbar() {
 
   const handleClick = (id) => {
     const section = document.getElementById(id);
-    if (section) section.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false); // fermer menu après clic
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setMenuOpen(false); // Ferme le menu mobile après clic
   };
-  
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <h1 className="navbar-title">Mon Portfolio</h1>
 
-        {/* Burger menu */}
-        <div
-          className={`burger ${menuOpen ? "open" : ""}`}
+        {/* Bouton Burger */}
+        <div 
+          className={`burger ${menuOpen ? "active" : ""}`} 
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
 
-        {/* Liens */}
-        <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
+        {/* Menu de navigation */}
+        <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
           {links.map((link) => (
-            <div
+            <li
               key={link.id}
-              className={`navbar-link ${active === link.id ? "active" : ""}`}
+              className={`nav-item ${active === link.id ? "active-link" : ""}`}
               onClick={() => handleClick(link.id)}
             >
               {link.label}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </nav>
   );
