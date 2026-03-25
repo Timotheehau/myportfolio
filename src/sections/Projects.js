@@ -25,7 +25,7 @@ export default function ProjectSection() {
             <p>
               Une application développée avec Symfony, gérant la gestion des montures et leurs statistiques.
             </p>
-            <a href="https://timohsymfoeval-production.up.railway.app/" target="_blank" rel="noopener noreferrer">
+            <a href="https://timohsymfoeval-production.up.railway.app/" target="_blank" rel="noreferrer">
               Visiter le site
               Compétences utilisées : Symfony, PHP, MySQL, HTML, CSS
             </a>
