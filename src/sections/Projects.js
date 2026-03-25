@@ -9,7 +9,8 @@ export default function ProjectSection() {
             <p>
               JHPrint3D est une entreprise spécialisée dans l'impression 3D...
             </p>
-            <a href="https://www.jhprint3d.com" target="_blank">Visiter le site</a>
+            {/* Ajout du rel ici */}
+            <a href="https://www.jhprint3d.com" target="_blank" rel="noopener noreferrer">Visiter le site</a>
           </div>
 
           <div className="card">
@@ -17,7 +18,8 @@ export default function ProjectSection() {
             <p>
               GoalTeach est une plateforme éducative en ligne...
             </p>
-            <a href="/GoalTeach/accueil.html" target="_blank">Visiter le site</a>
+            {/* Ajout du rel ici */}
+            <a href="/GoalTeach/accueil.html" target="_blank" rel="noopener noreferrer">Visiter le site</a>
           </div>
 
           <div className="card">
@@ -25,16 +27,17 @@ export default function ProjectSection() {
             <p>
               Une application développée avec Symfony, gérant la gestion des montures et leurs statistiques.
             </p>
-            <a href="https://timohsymfoeval-production.up.railway.app/" target="_blank" rel="noreferrer">
+            <p className="skills">Compétences utilisées : Symfony, PHP, MySQL, HTML, CSS</p>
+            <a href="https://timohsymfoeval-production.up.railway.app/" target="_blank" rel="noopener noreferrer">
               Visiter le site
-              Compétences utilisées : Symfony, PHP, MySQL, HTML, CSS
             </a>
           </div>
 
           <div className="card">
             <h3>.Match</h3>
             <p>Le projet de fin d'année de BTS SIO SLAM, les sportifs peuvent réserver une séance de coaching avec les coachs de la maison des ligues</p>
-            <a href="https://pointmatchfront.vercel.app" target="_blank">Visiter le site</a>
+            {/* Ajout du rel ici */}
+            <a href="https://pointmatchfront.vercel.app" target="_blank" rel="noopener noreferrer">Visiter le site</a>
           </div>
 
           <div className="card">
