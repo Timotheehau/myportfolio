@@ -45,22 +45,25 @@
 }
 
 /* 2. La barre commune (Hover ET Actif) */
-.nav-item::after {
+.active-link::after {
   content: "";
   position: absolute;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  transition: width 0.3s ease-in-out, background-color 0.3s;
-  /* Par défaut, la barre est invisible (largeur 0) */
-  width: 0%;
-  background-color: var(--primary); 
+  left: 50%;
+  bottom: -20px; /* ajuste selon ton navbar */
+  transform: translateX(-50%);
+  
+  width: 28px;   /* taille de l’icône */
+  height: 28px;
+  background-color: none;
+  background-image: url("../../public/icons/merry.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* 3. Comportement au Hover */
 .nav-item:hover {
-  color: var(--primary);
   transform: translateY(-2px);
+  color: var(--primary);
 }
 
 .nav-item:hover::after {
@@ -75,12 +78,11 @@
 
 .active-link::after {
   width: 100%; /* La barre reste affichée */
-  background-color: var(--accent); /* Elle devient jaune */
 }
 
 /* Optionnel : Si on survole l'élément déjà actif, on peut changer sa couleur en rouge */
 .active-link:hover::after {
-  background-color: var(--primary);
+  color: var(--primary);
 }
 
 /* Burger Menu (Caché sur desktop) */

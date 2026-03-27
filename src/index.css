@@ -114,13 +114,15 @@ h2::after {
 
 /* Liens */
 a {
-  color: var(--primary);
+  color: var(--accent);
   font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent);
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
   text-decoration: underline;
 }
 
@@ -211,7 +213,7 @@ a:hover {
 .see-more-btn {
   background: rgba(77, 166, 255, 0.1); /* Fond bleu très léger */
   border: 1px dashed var(--primary); /* Bordure en pointillés pour le style */
-  color: var(--primary);
+  color: var(--accent);
   padding: 12px;
   cursor: pointer;
   margin-top: 20px;
@@ -222,8 +224,8 @@ a:hover {
   width: 100%;
 }
 .see-more-btn:hover {
-  background: var(--accent);
-  color: #000;
+  background: var(--primary);
+  color: white;
   border-style: solid;
 }
 .project-swiper {
@@ -334,4 +336,95 @@ a:hover {
   font-size: 24px;
   cursor: pointer;
   z-index: 100001;
+}
+.carousel-container {
+  width: 100%;
+  padding: 10px 0;
+  /* On cache ce qui dépasse de la carte */
+  overflow: hidden; 
+}
+
+.project-swiper {
+  width: 100%;
+  /* On permet aux slides de déborder à l'intérieur du container pour la boucle */
+  overflow: visible !important; 
+}
+
+.img-wrapper {
+  height: 200px;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Garde l'image entière sans la couper */
+}
+
+/* --- ÉTAT DES IMAGES SUR LES CÔTÉS --- */
+.swiper-slide {
+  transition: opacity 0.4s ease;
+  opacity: 0.3; /* Très clair pour voir qu'elles sont là sans distraire */
+}
+
+.swiper-slide-active {
+  opacity: 1; /* L'image centrale est pleine */
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-stack span {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #eee;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Lien de visite */
+.visit-link {
+  margin-top: auto;
+  color: #f7a300;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.visit-link:hover {
+  transform: translateX(5px);
+  text-decoration: underline;
+}
+
+/* Style spécifique pour les veilles (Simple Card) */
+.simple-card {
+  justify-content: center;
+  min-height: 250px;
+}
+
+.download-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.download-links a {
+  padding: 8px 15px;
+  border-radius: 8px;
+  background: #f7a300;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-decoration: none;
 }
