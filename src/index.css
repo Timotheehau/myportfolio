@@ -111,6 +111,50 @@ h2::after {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--primary);
 }
+/* Style spécifique pour la section About */
+.about-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-card {
+  width: 50%; /* Prend la moitié de la largeur */
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+}
+
+/* --- L'EFFET QUINCONCE --- */
+
+.about-card:nth-child(odd) {
+  align-self: flex-start; /* 1, 3, 5 à gauche */
+}
+
+.about-card:nth-child(even) {
+  align-self: flex-end; /* 2, 4, 6 à droite */
+}
+
+/* Overlay pour lire le texte sur l'image */
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+/* Mobile : tout le monde prend toute la largeur */
+@media (max-width: 768px) {
+  .about-card {
+    width: 100%;
+  }
+}
 
 /* Liens */
 a {
