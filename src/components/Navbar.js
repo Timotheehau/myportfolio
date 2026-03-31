@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 const links = [
   { id: "hero", label: "Accueil" },
-  { id: "about", label: "À propos" },
+  { id: "about", label: "Parcours" },
   { id: "Projects", label: "Projets" },
   { id: "Skills", label: "Compétences" },
   { id: "Documentation", label: "Documentation" },
