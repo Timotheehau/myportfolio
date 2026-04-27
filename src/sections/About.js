@@ -65,7 +65,12 @@ export default function About() {
   return (
     <section id="about">
         <div className="content-wrapper">
-            <h2>Mon Parcours</h2>
+            <div className="section-header">
+                <h2>Mon Parcours</h2>
+                <a href="/cv-ton-nom.pdf" download className="cv-download-btn">
+                     Télécharger mon CV (PDF)
+                </a>
+            </div>
             <div className="about-cards-grid">
                 {journey.map((item, i) => (
                     <div
